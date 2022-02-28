@@ -1,0 +1,15 @@
+try it functions (MATLAB)
+#1: evaluate cos(e^3)
+> y = cos(e^3)
+ 
+#2: plot y = cos(e^x) from x = 0 to x = 3
+> y = cos(e^x);
+> x = linspace(0,3,100);
+> xlabel('x')
+> ylabel('y')
+> title('#2')
+> plot(x,y)
+
+#3: find roots of x^2 + 5x + 6
+> c = [1, 5, 6]  (to use roots func the C from each needs to be taken, doesn't know what x is)
+> r = roots(c)
