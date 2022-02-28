@@ -13,3 +13,74 @@ try it functions (MATLAB)
 #3: find roots of x^2 + 5x + 6
 > c = [1, 5, 6]  (to use roots func the C from each needs to be taken, doesn't know what x is)
 > r = roots(c)
+
+
+
+.M scripts eg
+%% frut cost script - total cost when buying frut
+apples = 5;
+oranges = 4;
+AppleCost = 1;  % in $
+OrangeCost = 0.5; % in $
+TotalCost = apples*AppleCost + oranges*OrangeCost
+
+TRACING
+%% Rugby_match - scoring a rugby match
+
+%Point allocations
+TRY = 5;
+CONVERSION = 2;
+PENALTY = 3;
+
+%start of game
+Australia = 0;
+Ireland = 0;
+
+%Game
+Australia = Australia + PENALTY;
+Ireland = Ireland + TRY;
+Ireland = Ireland + CONVERSION
+Australia = Australia + PENALTY;
+Australia = Australia + TRY
+
+
+Function Creation
+function TotalCost = fruit_cost(Apples,Oranges)
+%FRUIT_COST will determine the total cost in   when purchasing fruit
+
+AppleCost = 1; 
+OrangeCost = 0.5;
+
+TotalCost = Apples*AppleCost + Oranges*OrangeCost;
+
+end
+
+
+
+try it exercise 2
+#1 create a function that determines the surface area and volume of a cube, given side length is provided as an input.
+function [surface_area, volume] = find_cube_properties(l)
+
+surface_area = 6*l^2;
+volume = l^3;
+%[s,v] = find_cube_properties  gets the actual answer
+
+end
+
+
+
+#2 create a function that will determine magnitude and direction(in radians) of a 2d vector in cartesian form.
+function [magnitude, direction] = find_vector_properties(v)
+%find magnitude and direction of vector v
+% v has to be a vector with two components
+
+x = v(1)
+y = v(2)
+
+magnitude = sqrt(x^2 + y^2);
+direction = atan2(y, x);
+%[m, d] = find_vector_properties([-1,-2])
+
+end
+
+#3 Evaluate Integral(@exp(x)*2x dx, (0,1))
